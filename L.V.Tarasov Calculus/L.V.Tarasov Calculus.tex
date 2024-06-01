@@ -1,0 +1,148 @@
+\documentclass[bachelor, och, referat]{SCWorks}
+
+\usepackage[T2A]{fontenc}
+\usepackage[cp1251]{inputenc}
+\usepackage{graphicx}
+
+\usepackage[sort,compress]{cite}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage[english,russian]{babel}
+\usepackage{tempora}
+\usepackage{minted}
+
+\usepackage[colorlinks=true]{hyperref}
+
+\graphicspath{{images/}}
+
+\setminted{ style=bw,
+ framesep=2mm,  baselinestretch=1.2, 
+ fontsize=\small,  linenos,
+ breaklines=true}
+
+ \newcommand{\eqdef}{\stackrel {\rm def}{=}}
+
+\newtheorem{lem}{Лемма}
+
+\begin{document}
+
+
+% Включение нумерации рисунков, формул и таблиц по разделам
+% (по умолчанию - нумерация сквозная)
+% (допускается оба вида нумерации)
+%\secNumbering
+
+
+\tableofcontents
+
+% Раздел "Обозначения и сокращения". Может отсутствовать в работе
+
+% Раздел "Определения". Может отсутствовать в работе
+%\definitions
+
+% Раздел "Определения, обозначения и сокращения". Может отсутствовать в работе.
+% Если присутствует, то заменяет собой разделы "Обозначения и сокращения" и "Определения"
+%\defabbr
+
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=1.0\linewidth]{1.png}\caption{\label{fig:f1}
+%     Пример вида jupyter notebook в среде jupyter lab}
+% \end{figure}
+
+
+% Раздел "Введение"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\intro
+
+В этом файле будет законспектирована информация, которая
+мне показалась интересной, из книги Льва Николаевича
+Тарасова Математический Анализ.
+
+\section{Беседа 1}
+
+\textbf{Определение числовой последовательности:}
+\smallskip
+
+Говорят, что задана бесконечная числовая последовательность, если
+всякому натуральному числу по какому"=либо закону однозначно поставлено
+в соответствие определённое число (член последовательности)
+
+\begin{equation}
+    \begin{matrix}
+        1 & 2 & 3 & \dots & n & \dots \\
+        \downarrow & \downarrow  & \downarrow  & \dots & \downarrow & \dots \\
+        y_1 & y_2 & y_3 & \dots & y_n & \dots \\
+    \end{matrix}
+\end{equation}
+
+\textbf{reccure (лат.)} "--- возвращаться.
+
+\textbf{Важно} говорить какой является числовая последовательность,
+так как она далеко не всегда состоит из чисел.
+
+\textbf{Числовая} последовательность не обязательно является упорядоченной.
+
+\textbf{Определение неубывающей последовательности:}
+\smallskip
+
+Последовательность $(y_n)$ называется неубывающей, если:
+
+\begin{equation}
+    y_1 \leq y_2 \leq y_3 \leq \dots \leq y_n \leq \dots
+\end{equation}
+
+\textbf{Определение невозрастающей последовательности:}
+\smallskip
+
+Последовательность $(y_n)$ называется невозрастающей, если:
+
+\begin{equation}
+    y_1 \geq y_2 \geq y_3 \geq \dots \geq y_n \geq \dots
+\end{equation}
+
+\textbf{Невозрастающие} и неубывающие последовательности
+объединяют в класс монотонных последовательностей.
+
+\textbf{Определение ограниченной последовательности:}
+
+Последовательность $(y_n)$ называется ограниченной, если
+можно указать такие 2 числа $A$ и $B$, между которыми
+леат все члены последовательности:
+
+\begin{equation}
+    A \leq y_n \leq B \;\; : \;\; n = 1, 2, 3, \dots
+\end{equation}
+
+\textbf{С} понятия предела и начиется математический анализ. "---
+Лев Николаевич Тарасов.
+
+
+% Раздел "Заключение"
+\conclusion
+
+
+
+%Библиографический список, составленный вручную, без использования BibTeX
+%
+%\begin{thebibliography}{99}
+%  \bibitem{Ione} Источник 1.
+%  \bibitem{Itwo} Источник 2
+%\end{thebibliography}
+
+%Библиографический список, составленный с помощью BibTeX
+%
+% \bibliographystyle{gost780uv}
+% \bibliography{thesis}
+
+% Окончание основного документа и начало приложений
+% Каждая последующая секция документа будет являться приложением
+\appendix
+
+\end{document}
