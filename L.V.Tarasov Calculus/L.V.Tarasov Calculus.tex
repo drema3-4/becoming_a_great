@@ -154,7 +154,7 @@
 Число $a$ называется пределом последовательности, если
 
 \begin{equation}
-    \forall \epsilon > 0 \;\; \exists \; : \; \forall n > N \;\; |y_n - a| < \epsilon
+    \forall \epsilon > 0 \;\; \exists n_{\epsilon} \in N \;\; \forall n > n_{\epsilon} \;\; |y_n - a| < \epsilon
 \end{equation}
 
 Такой предел записывается следующим образом:
@@ -185,6 +185,248 @@
 \smallskip
 
 Сходящаяся последовательность "--- последовательность, имеющая предел.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Беседа III Сходящиеся последовательности}
+
+\textbf{Теорема (об ограниченности сходящейся последовательности):}
+\smallskip
+
+Если последовательность сходится, то она ограничена.
+\smallskip
+
+Доказательство:
+\smallskip
+
+Пусть последовательность $(y_n)$ имеет пределом число $a$, тогда
+
+\begin{equation}
+    \forall \epsilon > 0 \;\; \exists n_{\epsilon} \in N \;\; \forall n > n_{\epsilon} \;\; |y_n - a| < \epsilon
+\end{equation}
+
+так как число $n_{\epsilon}$ конечно, то существует лишь ограниченное
+число членов $(y_n)$ таких, что
+
+\begin{equation}
+    |y_n - a| > \epsilon
+\end{equation}
+
+Тогда подберём такие $A$ и $B$, что
+
+\begin{equation}
+    \forall n \in N \;\;\; A = a - \epsilon \leq y_n \leq a + \epsilon = B
+\end{equation}
+
+Тогда, согласно определению ограниченности последовательности,
+последовательность $(y_n)$ ограничена.
+\bigskip
+
+\textbf{Ограниченность} последовательности является, лишь
+необходимым условием сходимости последовательности,
+а не достаточным.
+\bigskip
+
+\textbf{Теорема (о единственности предела):}
+\smallskip
+
+Если последовательность сходится, то она имеет единственный предел.
+\smallskip
+
+Доказательство (от противного):
+\smallskip
+
+Пусть $(y_n)$ сходится к $a_1$ и $a_2$ и $a_1 \neq a_2$. Тогда
+
+\begin{equation}
+    \forall \epsilon_1 > 0 \;\; \exists n_{\epsilon_1} \in N \;\; \forall n > n_{\epsilon_1} \;\; |y_n - a_1| < \epsilon_1
+\end{equation}
+
+и
+
+\begin{equation}
+    \forall \epsilon_2 > 0 \;\; \exists n_{\epsilon_2} \in N \;\; \forall n > n_{\epsilon_2} \;\; |y_n - a_2| < \epsilon_2
+\end{equation}
+
+Выберем $n_{\epsilon} = max(n_{\epsilon_1}, n_{\epsilon_2})$. Тогда
+
+\begin{equation}
+    \forall \epsilon > 0 \;\; \forall n > n_{\epsilon} \;\; |y_n - a_1| < \epsilon \;\; |y_n - a_2| < \epsilon
+\end{equation}
+
+Следовательно, $a_1 = a_2$, следовательно, получаем противоречие.
+\bigskip
+
+\textbf{Теорема (достаточное условие сходимости последовательности):}
+\smallskip
+
+Если послеедовательность ограничена и монотонна, то она сходится.
+\bigskip
+
+\textbf{Указать} две соседние точки на числовой прямой невозможно.
+\bigskip
+
+\textbf{Правило треугольника:}
+
+\begin{equation}
+    |A + B| \leq |A| + |B|
+\end{equation}
+
+\textbf{Теорема (о сходимости суммы сходящихся последовательностей):}
+\smallskip
+
+Если последовательности $(y_n)$ и $(z_n)$ сходятся к $a$ и $b$ соответственно,
+то $(y_n + z_n)$ сходится к $a + b$.
+\smallskip
+
+Доказательство:
+\smallskip
+
+Пусть
+
+\begin{equation}
+    \forall \epsilon > 0 \;\; \exists n_{\epsilon_1} \in N \;\; \forall n > n_{\epsilon_1} \;\; |y_n - a| < \frac{\epsilon}{2}
+\end{equation}
+
+и
+
+\begin{equation}
+    \forall \epsilon > 0 \;\; \exists n_{\epsilon_2} \in N \;\; \forall n > n_{\epsilon_2} \;\; |z_n - a| < \frac{\epsilon}{2}
+\end{equation}
+
+Тогда для $n_{\epsilon} = max(n_{\epsilon_1}, n_{\epsilon_2})$ будет выполняться следующее
+
+\begin{equation}
+    |(y_n + z_n) - (a + b)| = |(y_n - a) + (z_n - b)| \leq |y_n - a| + |z_n - b| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+\end{equation}
+
+\textbf{Сходимость} суммы последовательностей вовсе не означает
+сходимость каждой из последовательностей в отдельности.
+\smallskip
+
+Если сумма двух последовательностей сходится, то возможно только
+два варианта:
+\begin{enumerate}
+    \item обе последовательности сходятся;
+    \item обе последовательности не сходятся.
+\end{enumerate}
+
+Других вариантов быть не может.
+\bigskip
+
+\textbf{Последовательность} называется бесконечно малой, если её
+предел равен 0.
+\bigskip
+
+\textbf{Для} любой сходящейся последовательности $(y_n)$,
+имеющей предел $a$, соответствует своя бесконечно малая последовательность
+$(\alpha_n)$, где $\alpha_n = y_n - a$.
+\bigskip
+
+\textbf{Теорема (о произведении бесконечно малой и ограниченной последовательностей):}
+\smallskip
+
+Пусть $(y_n)$ ограниченная последовательность и $(\alpha_n)$ бесконечно малая
+последовательность. Тогда $|y_n\alpha_n|$ является бесконечно малой последовательностью.
+\smallskip
+
+Доказательство:
+\smallskip
+
+Пусть $(y_n)$ является ограниченной последовательностью. Тогда
+
+\begin{equation}
+    \exists M \;\; \forall n \in N \;\; |y_n| \leq M
+\end{equation}
+
+Пусть $(\alpha_n)$ является бесконечно малой последовательностью,
+тогда
+
+\begin{equation}
+    \forall \epsilon > 0 \;\; \exists n_{\epsilon} \in N \;\; \forall n > n_{\epsilon} \;\; |\alpha_n| < \frac{\epsilon}{M}
+\end{equation}
+
+Тогда
+
+\begin{equation}
+    \forall \epsilon > 0 \;\; \exists n_{\epsilon} \in N \;\; \forall n > n_{\epsilon} \;\; |y_n\alpha_n| = |y_n| |\alpha_n| \leq M |\alpha_n| < M \frac{\epsilon}{M} = \epsilon
+\end{equation}
+
+\textbf{Теорема (о произведении сходящихся последовательностей):}
+\smallskip
+
+Если последовательности $(y_n)$ и $(z_n)$ сходятся к $a$ и $b$ соответственно, то последовательность
+$(y_nz_n)$ сходится к $ab$.
+\smallskip
+
+Доказательство:
+\smallskip
+
+Пусть $(y_n)$ и $(z_n)$ сходятся к $a$ и $b$ соответственно, и пусть
+
+\begin{equation}
+    y_n = a + \alpha_n \;\;\; z_n = b + \beta_n,
+\end{equation}
+где $\alpha_n$ и $\beta_n$ бесконечно малые последовательности.
+
+Тогда
+
+\begin{equation}
+    y_n z_n = a b + a \beta_n + b \alpha_n + \alpha_n \beta_n
+\end{equation}
+
+так как $a \beta_n$, $b \alpha_n$ и $\alpha_n \beta_n$ являются
+бесконечно малыми последовательностями, то
+
+\begin{equation}
+    \lim_{n \to \infty} (y_n z_n) = a b
+\end{equation}
+
+\textbf{Важно} помнить о том, что обратные теоремы
+далеко не всегда верны.
+\bigskip
+
+\textbf{Теорема (о частном двух сходящихся последовательностей):}
+\smallskip
+
+Пусть $(y_n)$ и $(z_n)$ сходятся к $a$ и $b$ соответственно и
+$b \neq 0$. Тогда $(\frac{y_n}{z_n})$ сходится к $\frac{a}{b}$.
+\smallskip
+
+Доказательство:
+\smallskip
+
+Пусть $(y_n)$ и $(z_n)$ сходятся к $a$ и $b$ соответственно и
+$b \neq 0$.
+
+Пусть
+
+\begin{equation}
+    y_n = a + \alpha_n \;\;\; z_n = b + \beta_n,
+\end{equation}
+где $\alpha_n$ и $\beta_n$ бесконечно малые последовательности.
+
+Тогда
+
+\begin{equation}
+    \frac{y_n}{z_n} = \frac{a + \alpha_n}{b + \beta_n} = \frac{(a + \alpha_n)(b - \beta_n)}{(b + \beta_n)(b - \beta_n)} = \frac{ab - a\beta_n + b \alpha_n - \alpha_n \beta_n}{b^2 \beta_n^2}
+\end{equation}
+
+Тогда
+
+\begin{equation}
+    \lim_{n \to \infty} \frac{y_n}{z_n} = \lim_{n \to \infty} \frac{ab - a \beta_n + b \alpha_n - \alpha_n \beta_n}{b^2 - \beta_n^2} = \frac{ab}{b^2} \ frac{a}{b}
+\end{equation}
+
+\textbf{Изменение} любого конечного числа ченов последовательности не способно повлиять на её сходимость.
+\bigskip
+
+\textbf{Изменение} бесконечного количества членов сходящщейся последовательности не
+повлияет на её сходимость.
+\bigskip
+
+\textbf{Изменение} бесконечного количества членов не сходящщейся последовательности может
+повлиять на её сходимость.
 
 % Раздел "Заключение"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
